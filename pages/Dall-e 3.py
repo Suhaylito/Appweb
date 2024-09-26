@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("Dall-e 3")
+st.title("Application Web - Open IA")
