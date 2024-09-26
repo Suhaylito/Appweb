@@ -1,36 +1,26 @@
-import openai
 import streamlit as st
 
-# Titre de l'application
-st.title("DALL-E")
+st.title("Dall-e 3")
 
-# Champ d'entrée pour l'utilisateur
-user_input = st.text_input("Générer une image facilement juste ici :")
+#Champ de saisie
+user_input = st.text_input("Open IA")
+st.write(user_input)
 
-# Créer un champ d'entrée dans la barre latérale pour la clé API
-api_key = st.sidebar.text_input("Entrez votre clé DALL-E API :", type="password")
+#La clé OpenAI
+recherche_input = st.sidebar.text_input("La clé OpenAI")
+st.write(recherche_input)
 
-# Validation de la clé API
-if api_key:
-    # Configurer la clé API pour OpenAI
-    openai.api_key = api_key
-    
-    # Bouton pour générer l'image
-    if st.button("Générer une image"):
-        if user_input:
-            # Générer l'image avec DALL-E
-            try:
-                response = openai.Image.create(
-                    prompt=user_input,
-                    n=1,
-                    size="512x512"
-                )
-                image_url = response['data'][0]['url']
-                # Afficher l'image générée
-                st.image(image_url, caption=f"Image générée pour : {user_input}")
-            except Exception as e:
-                st.error(f"Erreur lors de la génération de l'image : {e}")
-        else:
-            st.error("Veuillez entrer une description pour générer l'image.")
-else:
-    st.warning("Veuillez entrer votre clé API DALL-E dans la barre latérale.")
+#Intéraction avec OpenAI
+from openai import OpenAI
+client = OpenAI(api_key=recherche_input)
+
+prompt = "A cute baby sea otter"
+
+image = client.images.generate(
+    model="dall-e-2",
+    prompt=user_input,
+    size="512x512",
+    quality="standard",
+    n=1,
+)
+image_url = image.data[0].url
