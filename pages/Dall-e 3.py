@@ -7,7 +7,7 @@ user_input = st.text_input("Open IA")
 st.write(user_input)
 
 #La clé OpenAI
-recherche_input = st.sidebar.text_input("La clé OpenAI")
+recherche_input = st.sidebar.text_input("Entrée une clé OpenAI")
 st.write(recherche_input)
 
 #Intéraction avec OpenAI
