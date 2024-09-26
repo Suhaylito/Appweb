@@ -17,3 +17,7 @@ st.image("https://www.radiofrance.fr/s3/cruiser-production/2021/09/6be9e0c8-44b5
 
 #Sidebar
 st.sidebar.title ("Balladin Suhayl")
+
+#video dans la sidebar
+
+st.sidebar.video ("https://www.youtube.com/watch?v=eW_TvHbnHwA")
