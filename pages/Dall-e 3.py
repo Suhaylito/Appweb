@@ -18,7 +18,7 @@ if st.sidebar.button("Valider la clé API"):
         
 #Intéraction avec OpenAI
 from openai import OpenAI
-client = OpenAI(api_key=sidebar_input)
+client = OpenAI(api_key=sk-6uxlenvrwsRO0NlIgqhrg2B-avWNwVlPV8MgbU-QSHT3BlbkFJSc_Lmu6ZS06yDsSmP4kvVEd42Ds95-CXp726oavJMA)
 
 prompt = "A cute baby sea otter"
 
