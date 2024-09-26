@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # Titre de l'application
-st.title("DALL-E Image Generator")
+st.title("DALL-E")
 
 # Champ d'entrée pour l'utilisateur
 user_input = st.text_input("Générer une image facilement juste ici :")
@@ -20,7 +20,7 @@ if api_key:
         if user_input:
             # Générer l'image avec DALL-E
             try:
-                response = openai.Image.create_edit(  # Utilisation de l'interface modifiée
+                response = openai.Image.create(
                     prompt=user_input,
                     n=1,
                     size="512x512"
