@@ -29,3 +29,6 @@ age = st.select_slider ("Quel est votre âge ? ", range(0,99))
 
 if age > 18: 
   st.whrite ("Vous êtes majeur")
+
+else age < 18:
+  st.whrite ("Vous êtes mineur")
