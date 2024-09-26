@@ -10,3 +10,7 @@ st.write ("Ceci est un formulaire de contact")
 user_input = st.text_input("Tapez votre texte : ")
 
 st.write (user_input)
+
+
+#image 
+St.image("https://www.booska-p.com/wp-content/uploads/2021/12/Lacrim-Pop-Smoke-Visu-News.jpg")
