@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # Titre de l'application
-st.title("DALL-E Image Generator")
+st.title("DALL-E")
 
 # Champ d'entrée pour l'utilisateur
 user_input = st.text_input("Générer une image facilement juste ici :")
